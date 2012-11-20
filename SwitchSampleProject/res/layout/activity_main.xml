@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res/de.ankri.switchtest">
+
+    <de.ankri.views.Switch
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/light"
+        
+        
+        android:id="@+id/switch_a"
+        />
+    
+    <de.ankri.views.Switch
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/custom"
+        app:textOn="Right"
+        app:textOff="Left"
+        
+        android:id="@+id/switch_b"
+        />    
+    
+    
+    <de.ankri.views.Switch 
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disabled"
+        android:enabled="false"
+        
+        
+        android:id="@+id/switch_c"
+        />
+    
+    <ImageView 
+        android:src="@drawable/light_bulb_off"
+        android:id="@+id/light_bulb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/light_bulb"
+        />
+        
+
+</LinearLayout>

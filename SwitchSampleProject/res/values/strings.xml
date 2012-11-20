@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SwitchTest</string>
+    <string name="light">The light is: </string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="disabled">disabled</string>
+    <string name="light_bulb">This should be a light bulb!</string>
+    <string name="custom">Custom switch texts:</string>
+</resources>
