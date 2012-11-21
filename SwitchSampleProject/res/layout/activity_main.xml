@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res/de.ankri.switchtest">
+    xmlns:app="http://schemas.android.com/apk/res/de.ankri.switchtest" 
+    >
 
     <de.ankri.views.Switch
         android:layout_marginTop="20dp"
@@ -22,6 +23,8 @@
         android:text="@string/custom"
         app:textOn="Right"
         app:textOff="Left"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         
         android:id="@+id/switch_b"
         />    

@@ -173,7 +173,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class id {
         public static final int light_bulb=0x7f080003;
-        public static final int menu_settings=0x7f080004;
+        public static final int menu_dark_theme=0x7f080004;
+        public static final int menu_light_theme=0x7f080005;
         public static final int switch_a=0x7f080000;
         public static final int switch_b=0x7f080001;
         public static final int switch_c=0x7f080002;
@@ -187,9 +188,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class string {
         public static final int app_name=0x7f040002;
         public static final int custom=0x7f040008;
+        public static final int dark_theme=0x7f040009;
         public static final int disabled=0x7f040006;
         public static final int light=0x7f040003;
         public static final int light_bulb=0x7f040007;
+        public static final int light_theme=0x7f04000a;
         public static final int menu_settings=0x7f040004;
         public static final int textOff=0x7f040001;
         public static final int textOn=0x7f040000;
