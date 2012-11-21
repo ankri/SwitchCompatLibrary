@@ -18,6 +18,7 @@ import android.util.FloatMath;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
+import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.CompoundButton;
 import de.ankri.R;
@@ -29,10 +30,10 @@ import de.ankri.text.method.TransformationMethodCompat2;
  * checkbox. The {@link #setText(CharSequence) text} property controls the text displayed in the label for the switch, whereas the {@link #setTextOff(CharSequence) off} and
  * {@link #setTextOn(CharSequence) on} text controls the text on the thumb. Similarly, the {@link #setTextAppearance(android.content.Context, int) textAppearance} and the related setTypeface() methods
  * control the typeface and style of label text, whereas the {@link #setSwitchTextAppearance(android.content.Context, int) switchTextAppearance} and the related seSwitchTypeface() methods control that
- * of the thumb.
+ * of the thumb. <br>
  * 
  * <p>
- * See the <a href="{@docRoot}guide/topics/ui/controls/togglebutton.html">Toggle Buttons</a> guide.
+ * See the <a href="http://developer.android.com/guide/topics/ui/controls/togglebutton.html">Toggle Buttons</a> guide.
  * </p>
  * 
  * @attr ref android.R.styleable#Switch_textOn
@@ -160,6 +161,17 @@ public class Switch extends CompoundButton
 		// Refresh display with current params
 		refreshDrawableState();
 		setChecked(isChecked());
+
+		// TODO I don't know why, but in order for the OnCheckedChangeListener to work this switch has to have an OnClickListener
+		this.setOnClickListener(new View.OnClickListener()
+		{
+
+			@Override
+			public void onClick(View v)
+			{
+				// do nothing
+			}
+		});
 	}
 
 	/**
@@ -527,8 +539,6 @@ public class Switch extends CompoundButton
 	{
 		final CharSequence transformed = (mSwitchTransformationMethod != null) ? mSwitchTransformationMethod.getTransformation(text, this) : text;
 		return new StaticLayout(transformed, mTextPaint, (int) FloatMath.ceil(Layout.getDesiredWidth(transformed, mTextPaint)), Layout.Alignment.ALIGN_NORMAL, 1.f, 0, true);
-
-		// return new StaticLayout(text, mTextPaint, (int) Math.ceil(Layout.getDesiredWidth(text, mTextPaint)), Layout.Alignment.ALIGN_NORMAL, 1.f, 0, true);
 	}
 
 	/**
