@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
-import de.ankri.R;
 import de.ankri.views.Switch;
 
 public class MainActivity extends Activity
