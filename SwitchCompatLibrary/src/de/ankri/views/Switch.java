@@ -799,6 +799,31 @@ public class Switch extends CompoundButton
 		}
 		return padding;
 	}
+	
+	/**
+	 * This method is added inorder to allow users to be able to change the switch text at runtime
+	 * That is not via xml but by calling switch.setTextOn and setTextOff methods.
+	 * 
+	 */
+	@Override
+	public void requestLayout() {
+		super.requestLayout();
+		try {
+			java.lang.reflect.Field mOnLayout = Switch.class.getDeclaredField("mOnLayout");
+	        mOnLayout.setAccessible(true);
+	        mOnLayout.set(this, null);
+	        
+	        java.lang.reflect.Field mOffLayout = Switch.class.getDeclaredField("mOffLayout");
+	        mOffLayout.setAccessible(true);
+	        mOffLayout.set(this, null);
+		}catch (NoSuchFieldException e) {
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+	}
 
 	private int getThumbScrollRange()
 	{
