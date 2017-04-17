@@ -2,7 +2,7 @@
 Sadly I do not have the time to maintain the code any longer. Additionally I have not worked with Android for quite some time now. If you want to have a backport of the switch, please have a look at this project: https://github.com/Prototik/HoloEverywhere
 
 
-##Switch for Froyo, Gingerbread & Honeycomb##
+## Switch for Froyo, Gingerbread & Honeycomb ##
 A little while ago I started my own custom Switch button for Gingerbread. I wanted to have a switch button that always displays the texts on the left and right side. Since the standard Switch only shows the text from the currently selected side, I had to code my own version, which you can check out here: http://ankri.de/switch-button-for-android-2-3-gingerbread/
 
 Unfortunately it isn't perfect. You cannot disable it for example, because I didn't need it in my use case. After I got some feedback, I decided to do a complete backport of the original Switch button, which was fairly easy! I just copied the code and edited some lines.
